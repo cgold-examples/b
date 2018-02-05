@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 project(b)
 
 add_library(b b/b.cpp b/b.hpp)
+add_library(b::b ALIAS b)
 
 target_include_directories(
     b PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>"
